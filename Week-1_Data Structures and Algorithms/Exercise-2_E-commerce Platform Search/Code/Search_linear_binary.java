@@ -6,9 +6,9 @@ public class Search_linear_binary {
 
 public static int lin_search(Product products[], int targetId) {
 		
-		for(int i = 0; i < products.length; i++) {
-			if(products[i].getProductId() == targetId) {
-				return i;
+		for(int k = 0; k < products.length; k++) {
+			if(products[k].getProductId() == targetId) {
+				return k;
 			}
 		}
 		return -1;
