@@ -1,5 +1,4 @@
 
-
 public class Ecommerce_test {
 
     public static void main(String[] args) {
@@ -12,21 +11,24 @@ public class Ecommerce_test {
             new Product(24, "kiwi", "fruit")
         };
 
-        
+        //ids to be searched...
         int searchId = 21;
+        int searchId2=23;
+        
 
+        Search_linear_binary.productid_sort(inventory);
+      int binaryResult = Search_linear_binary.bsearch(inventory, searchId);
+      displayBinarySearchResult(binaryResult, inventory);
+      
         int linearResult = Search_linear_binary.lin_search(inventory, searchId);
          displayLinearSearchResult(linearResult, inventory);
 
         
-          Search_linear_binary.productid_sort(inventory);
-        int binaryResult = Search_linear_binary.bsearch(inventory, searchId);
-        displayBinarySearchResult(binaryResult, inventory);
     }
     
      private static void displayLinearSearchResult(int index, Product[] inventory) {
         if (index != -1) {
-            System.out.println("Linear_Search Result: " + inventory[index].toString());
+            System.out.println("Linear_Search Result--> " +inventory[index].toString());
         } else {
             System.out.println("Linear_Search:Product ID not found_");
         }
@@ -34,7 +36,7 @@ public class Ecommerce_test {
     
       private static void displayBinarySearchResult(int index, Product[] inventory) {
         if (index != -1) {
-            System.out.println("Binary Search Result: "+ inventory[index].toString());
+            System.out.println("Binary Search Result--> "+inventory[index].toString());
         }  
         else {
             System.out.println("Binary_Search: Product ID not found_");
